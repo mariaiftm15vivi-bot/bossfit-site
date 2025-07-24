@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BossFit - Moda Fitness</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a021e, #310836);
+      font-family: 'Poppins', sans-serif;
+    }
+    .product-list::-webkit-scrollbar {
+      height: 8px;
+    }
+    .product-list::-webkit-scrollbar-track {
+      background: #310836;
+    }
+    .product-list::-webkit-scrollbar-thumb {
+      background: #f87171;
+      border-radius: 10px;
+    }
+    button:hover {
+      background-color: #ef4444;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="text-white flex flex-col min-h-screen">
+  <!-- (Conteúdo encurtado para simplificação) -->
+  <footer class="bg-gradient-to-r from-red-700 via-pink-700 to-yellow-600 text-white py-6 mt-auto">
+    <div class="max-w-7xl mx-auto text-center text-sm">
+      © 2024 BossFit. Todos os direitos reservados.
+    </div>
+  </footer>
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    function handleSubmit(e) {
+      e.preventDefault();
+      const feedback = document.getElementById('form-feedback');
+      feedback.textContent = 'Sua mensagem foi enviada com sucesso!';
+      feedback.classList.remove('hidden');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
